@@ -20,6 +20,7 @@ namespace VendingMachine
             Console.WriteLine("1. Water");
             Console.WriteLine("2. Coca Cola");
             Console.WriteLine("3. Red Bull");
+            Console.WriteLine("4. Dr. Pepper");
         }
 
         public void Dispense()
@@ -37,6 +38,10 @@ namespace VendingMachine
             {
                 Console.WriteLine("Dispensing Red Bull");
             }
+            if( UserChoice == 4)
+            {
+                Console.WriteLine("Dispensing Dr. Pepper");
+            }
         }
 
         public int GetSelection(int i)
@@ -52,7 +57,7 @@ namespace VendingMachine
 
         private bool ValidateChoice(int UserChoice)
         {
-            return UserChoice >= 1 && UserChoice <= 3;
+            return UserChoice >= 1 && UserChoice <= 4;
         }
     }
 }
